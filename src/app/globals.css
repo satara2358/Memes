@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .container {
   background-color: darkgray;
   text-align: center;
@@ -11,17 +15,18 @@
 .texto {
   position: absolute;
   margin-top: 100px;
-  text-align: center;
+  font-family: cursive;
   font-size: 38px;
   color: aliceblue;
-  font-style: "font-extrabold";
+  text-align: center;
 }
 
 .texto2 {
   position: absolute;
   margin-top: 400px;
-  text-align: center;
+  font-family: cursive;
   font-size: 38px;
   color: aliceblue;
-  font-style: "font-extrabold";
+  text-align: center;
 }
+

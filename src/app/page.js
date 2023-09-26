@@ -20,8 +20,8 @@ function Home() {
 
   const onClickImage = (event) => {
     html2canvas(document.querySelector("#meme")).then((canvas) => {
-      let img = canvas.toDataURL("image/png");
-      let link = document.createElement("a");
+      var img = canvas.toDataURL("image/png");
+      var link = document.createElement("a");
       link.download = "meme.png";
       link.href = img
       link.click();
@@ -42,16 +42,15 @@ function Home() {
         </select>
         <form>
           <input onChange={onChangeLine1} type="text" placeholder="line 1" />
-          <br />
+          <br/>
           <input onChange={onChangeLine2} type="text" placeholder="line 2" />
         </form>
         <button onClick={onClickImage}>Exportar</button>
-        <div>
+        <div id="meme" >
           <span className="texto">{line1}</span>
-          <br />
           <span className="texto2">{line2}</span>
+          <img className="imagen" src={`../images/${imagen}.png`}/>
         </div>
-        <img className="imagen" src={`../images/${imagen}.png`} id="meme"></img>
       </div>
     </div>
   );
